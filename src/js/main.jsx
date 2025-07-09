@@ -11,8 +11,39 @@ import '../styles/index.css'
 // components
 import Home from './components/Home';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Home/>
-  </React.StrictMode>,
-)
+const reactRender = ReactDOM.createRoot(document.getElementById('root'))
+
+let seconds = 0;
+let minutes = 0;
+let hours = 0;
+let days = 0;
+
+setInterval(() => {
+  seconds++;
+
+  if (seconds === 10) {
+    seconds = 0;
+    minutes++;
+  }
+
+  if (minutes === 10) {
+    minutes = 0;
+    hours++;
+  }
+
+  if (hours === 10) {
+    hours = 0;
+    days++;
+  }
+
+  reactRender.render(
+    <React.StrictMode>
+      <Home 
+        days={days} 
+        hours={hours} 
+        minutes={minutes} 
+        seconds={seconds} 
+      />
+    </React.StrictMode>
+  );
+}, 1000);
