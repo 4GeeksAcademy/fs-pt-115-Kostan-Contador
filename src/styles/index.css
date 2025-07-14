@@ -1,7 +1,12 @@
+body{
+  background-color: #000000;
+}
+
 .counter{
     text-align: center;
     background-color: rgb(39, 39, 39);
-    
+    margin: auto;
+    margin-top: 200px;
 }
 
 .counter div{
@@ -28,11 +33,11 @@
   color: #e0e0e0;
   width: max-content;
   user-select: none;
+  
 }
 
 .clockIcon {
   font-size: 2.5rem;
-  color: #00bfff;
   margin-right: 15px;
 }
 
@@ -51,5 +56,25 @@
 .days:hover, .hour:hover, .min:hover, .sec:hover {
   background: #00bfff;
   color: #121212;
-  cursor: default;
+  cursor: pointer;
+}
+
+button {
+  color: #00ccff;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #101010;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  transition: all 0.0s;
+  box-shadow: 6px 6px 12px #2b5ca5, -6px -6px 12px #2b5ca5;
+  justify-content: center;
+  margin-top: 80px;
+
+}
+
+button:active {
+  color: #00c3ff;
+  box-shadow: inset 4px 4px 12px #a200ff, inset -4px -4px 12px #a200ff;
 }
