@@ -78,3 +78,39 @@ button:active {
   color: #00c3ff;
   box-shadow: inset 4px 4px 12px #a200ff, inset -4px -4px 12px #a200ff;
 }
+
+
+body {
+  background-color: #111111;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation .2s infinite;
+  opacity: .9;
+  visibility: visible;
+}
+
+@keyframes bg-animation {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-15%,-15%) }
+    20% { transform: translate(-10%,15%) }
+    30% { transform: translate(15%,-10%) }
+    40% { transform: translate(-15%,15%) }
+    50% { transform: translate(-10%,15%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,15%) }
+    100% { transform: translate(15%,0) }
+}
